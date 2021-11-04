@@ -2,11 +2,11 @@ export class DatabaseConfig {
   getConfig(): any {
     return {
       type: 'postgres',
-      host: process.env.HOST || 'localhost',
-      port: process.env.PORT || 3306,
-      username: process.env.USERNAME || 'root',
-      password: process.env.PASSWORD || 'root',
-      database: process.env.DATABASE || 'test',
+      host: process.env.DATABASE_HOST || 'localhost',
+      port: parseInt(process.env.DATABASE_PORT) || 5432,
+      database: process.env.DATABASE_DATABASE || 'postgres',
+      username: process.env.DATABASE_USERNAME || 'postgres',
+      password: process.env.DATABASE_PASSWORD || 'touba2014',
       entities: ['dist/**/*.entity{.ts,.js}'],
       synchronize: true,
     };

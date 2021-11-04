@@ -15,7 +15,7 @@ const databaseConfig = new DatabaseConfig();
 
 @Module({
   imports: [
-    //TypeOrmModule.forRoot(databaseConfig.getConfig()),
+    TypeOrmModule.forRoot(databaseConfig.getConfig()),
     AthleteModule,
     ClubModule,
     DisciplineModule,
