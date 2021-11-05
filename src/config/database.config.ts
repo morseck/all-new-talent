@@ -7,8 +7,12 @@ export class DatabaseConfig {
       database: process.env.DATABASE_DATABASE || 'postgres',
       username: process.env.DATABASE_USERNAME || 'postgres',
       password: process.env.DATABASE_PASSWORD || 'touba2014',
-      entities: ['dist/**/*.entity{.ts,.js}'],
-      synchronize: true,
+      //entities: ['dist/**/*.entity{.ts,.js}'],
+      //synchronize: true,
+      //ssl: false,
+      ssl: {
+        rejectUnauthorized: false,
+      },
     };
   }
 }
